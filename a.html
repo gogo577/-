@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <style>
+      #target{
+        background-color: red;
+        /* position: absolute; */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="target" style="width: 50px;height: 50px"> Touch me ... </div>
+    <div id="t2">
+        123
+    </div>
+  </body>
+  <script>
+      let otarget = document.getElementById('target')
+      let ot = document.getElementById('t2')
+      ot.onclick=function(){
+        otarget.dispatchEvent('click')
+      }
+      otarget.onclick=function(){
+        console.log('被点')
+      }
+  </script>
+</html>
